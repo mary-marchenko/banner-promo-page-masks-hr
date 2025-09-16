@@ -1,0 +1,116 @@
+$blue: #005
+$grey: #E8E8E8
+$white: #FFFFFF
+$magenta: #FF267E
+$green: #05C489
+$green-hover: #09B47F
+
+$font-display-condBold: FavbetDisplay-CondensedBold, sans-serif // 700
+$font-display-normBold: FavbetDisplay-NormalBold, sans-serif // 700
+$font-display-normMedium: FavbetDisplay-NormalMedium, sans-serif // 500
+$font-roboto-bold: RobotoCondensed-Bold, sans-serif //700
+
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  background: $blue
+  img,
+  picture
+    max-width: 100%
+    height: auto
+
+.bannerTeam
+  &.en
+    .bannerTeam__bonus
+      width: 530px
+      padding: 0 38px
+      &-right
+        justify-content: center
+      &-item
+        &:nth-child(2)
+          @media screen and (max-width: 600px) and (min-height: 500px)
+            max-width: 52px
+      @media screen and (max-width: 600px) and (min-height: 500px)
+        width: 276px
+        padding: 0 20px 0 22px
+
+.bannerTeam
+  width: 100%
+  position: relative
+  height: 455px
+  overflow: hidden
+  background: url("../img/bg-desc.jpg") no-repeat 50% 50%/cover
+  @media screen and (max-width: 1050px)
+    background: url("../img/bg-tab.jpg") no-repeat 50% 50%/cover
+  @media screen and (max-width: 600px) and (min-height: 500px)
+    background: url("../img/bg-mob.jpg") no-repeat 50% 50%/cover
+  &__container
+    display: flex
+    justify-content: space-between
+    max-width: 1250px
+    height: 100%
+    margin: 0 auto
+    position: relative
+    z-index: 2
+  &__left
+    display: flex
+    flex-direction: column
+    align-items: center
+    z-index: 2
+    justify-content: center
+    width: 45%
+  &__right
+    z-index: 1
+    height: fit-content
+    max-height: 100%
+    width: 55%
+    position: absolute
+    bottom: 0
+    right: 0
+  &__title
+    &-top, &-bottom
+      font-family: $font-display-condBold
+      font-size: 49px
+      line-height: 52px
+      letter-spacing: 0.98px
+      text-transform: uppercase
+      color: $white
+      white-space: nowrap
+      text-align: left
+  &__bonus
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 580px
+    background: url("../img/blocks.png") no-repeat 0 0/contain
+    background-size: 100% 100%
+    margin-top: 9px
+    padding: 0 55px 0 50px
+    &-left, &-right
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      width: 50%
+      height: 69px
+    &-right
+      justify-content: flex-end
+    &-item
+      color: $white
+      text-transform: uppercase
+      &:nth-child(1)
+        font-family: $font-display-normBold
+        font-size: 49px
+        line-height: 49px
+        letter-spacing: 0.981px
+        white-space: nowrap
+        margin-right: 14px
+        span
+          font-family: $font-display-condBold
+      &:nth-child(2)
+        font-family: $font-display-normMedium
+        font-size: 20.6px
+        line-height: 20px
+        letter-spacing: 0.413px
+        text-align: left
+        max-width: 116px
